@@ -2,6 +2,8 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Farmer;
+using System;
+using System.Collections.Generic;
 
 namespace Game1
 {
@@ -15,7 +17,19 @@ namespace Game1
         GameContent gameContent;
         private int screenWidth;
         private int screenHeight;
+        //Objects
         public Player player;
+        public mainMenu mainmenu;
+        public List<menuOption> options = new List<menuOption>();
+        //Game states to switch between menus and playing.
+        public enum GameStates
+        {
+            Menu,
+            Playing,
+            Paused
+        }
+        public GameStates activeState;
+        public bool isPlaying;
 
         public Game1()
         {
@@ -34,6 +48,7 @@ namespace Game1
             // TODO: Add your initialization logic here
 
             base.Initialize();
+            activeState = GameStates.Menu;
         }
 
         /// <summary>
@@ -49,8 +64,33 @@ namespace Game1
             gameContent = new GameContent(Content);
             screenWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
             screenHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
+            if(screenWidth >= 1920)
+            {
+                screenWidth = 1920;
+            }
+            if(screenHeight >= 1080)
+            {
+                screenHeight = 1080;
+            }
+            graphics.PreferredBackBufferWidth = screenWidth;
+            graphics.PreferredBackBufferHeight = screenHeight;
+            //graphics.IsFullScreen = true;
+            graphics.ApplyChanges();
 
-           player = new Player(100, 100, spriteBatch, gameContent, 1, 1, 0);
+            if (activeState == GameStates.Menu)
+            {
+                mainmenu = new mainMenu(spriteBatch, gameContent);
+                options.Add(new menuOption(spriteBatch, gameContent, true, 400, 400, 1));
+                options.Add(new menuOption(spriteBatch, gameContent, false, 1110, 400, 2));
+            }
+            if (activeState == GameStates.Playing)
+            {
+                player = new Player(100, 100, spriteBatch, gameContent, 1, 1, 0);
+            }
+            if (activeState == GameStates.Paused)
+            {
+                //Stuff
+            }
         }
 
         /// <summary>
@@ -73,7 +113,30 @@ namespace Game1
                 Exit();
 
             // TODO: Add your update logic here
-
+            if (activeState == GameStates.Menu)
+            {
+                options.ForEach(x => x.Update());
+                foreach(menuOption option in options)
+                {
+                    if (option.clicked)
+                    {
+                        activeState = GameStates.Playing;
+                        LoadContent();
+                    }
+                    if (option.clicked2)
+                    {
+                        Exit();
+                    }
+                }
+            }
+            if (activeState == GameStates.Playing)
+            {
+                //Stuff
+            }
+            if (activeState == GameStates.Paused)
+            {
+                //Stuff
+            }
             base.Update(gameTime);
         }
 
@@ -83,10 +146,20 @@ namespace Game1
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
-
             // TODO: Add your drawing code here
-            player.Draw();
+            if(activeState == GameStates.Menu)
+            {
+                mainmenu.Draw();
+                options.ForEach(x => x.Draw());
+            }
+            if(activeState == GameStates.Playing)
+            {
+                player.Draw();
+            }
+            if(activeState == GameStates.Paused)
+            {
+                //Stuff
+            }
             base.Draw(gameTime);
         }
     }

@@ -41,6 +41,8 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="menuOption.cs" />
+    <Compile Include="mainMenu.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="GameContent.cs" />
     <Compile Include="Game1.cs" />

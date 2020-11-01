@@ -46,3 +46,6 @@ D:\All files\University\Y2\Games\Farming-simulator\Farming\Game1\Game1\obj\x86\D
 D:\All files\University\Y2\Games\Farming-simulator\Farming\Game1\Game1\obj\x86\Debug\Game1.csproj.CopyComplete
 D:\All files\University\Y2\Games\Farming-simulator\Farming\Game1\Game1\obj\x86\Debug\Game1.exe
 D:\All files\University\Y2\Games\Farming-simulator\Farming\Game1\Game1\obj\x86\Debug\Game1.pdb
+D:\All files\University\Y2\Games\Farming-simulator\Farming\Game1\Game1\bin\Windows\x86\Debug\Content\mainMenu.xnb
+D:\All files\University\Y2\Games\Farming-simulator\Farming\Game1\Game1\bin\Windows\x86\Debug\Content\option.xnb
+D:\All files\University\Y2\Games\Farming-simulator\Farming\Game1\Game1\bin\Windows\x86\Debug\Content\option2.xnb
