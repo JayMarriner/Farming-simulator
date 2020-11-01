@@ -20,9 +20,7 @@ namespace Farmer
 
         public void Draw()
         {
-            menuSpriteBatch.Begin();
             menuSpriteBatch.Draw(menuTexture, new Vector2(0, 0), null, Color.White, 0, new Vector2(0, 0), 1.0f, SpriteEffects.None, 0);
-            menuSpriteBatch.End();
         }
     }
 }

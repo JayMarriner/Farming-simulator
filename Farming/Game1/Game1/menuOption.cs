@@ -50,9 +50,7 @@ namespace Farmer
                 optionColor = Color.LightGreen;
             }
 
-            optionSpriteBatch.Begin();
             optionSpriteBatch.Draw(optionTexture, new Vector2(optionX, optionY), null, optionColor, 0, new Vector2(0, 0), 1.0f, SpriteEffects.None, 0);
-            optionSpriteBatch.End();
         }
 
         public void Update()

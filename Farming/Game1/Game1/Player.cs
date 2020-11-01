@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
 
 namespace Farmer
 {
@@ -18,6 +19,8 @@ namespace Farmer
         private int playerWidth { get; set; }
         private SpriteBatch playerSpriteBatch;
         private Texture2D playerTexture;
+        private int newPosX;
+        private int newPosY;
 
         public Player(int x, int y, SpriteBatch spriteBatch, GameContent gameContent, int speed, int level, int cash)
         {
@@ -34,9 +37,21 @@ namespace Farmer
 
         public void Draw()
         {
-            playerSpriteBatch.Begin();
             playerSpriteBatch.Draw(playerTexture, new Vector2(playerX, playerY), null, Color.White, 0, new Vector2(playerWidth, playerHeight), 1.0f, SpriteEffects.None, 0);
-            playerSpriteBatch.End();
+        }
+
+        //public Rectangle hitBox => new Rectangle(playerX - playerWidth / 2, playerY - playerHeight / 2, playerWidth, playerHeight);
+        //public Rectangle newMove => new Rectangle(newPosX - playerWidth / 2, newPosY - playerHeight / 2, playerWidth, playerHeight);
+
+        public void Update()
+        {
+            KeyboardState keyInput = Keyboard.GetState();
+            if (keyInput.IsKeyDown(Keys.S))
+            {
+                playerY+= 10;
+                playerX += 10;
+                Console.WriteLine(playerY);
+            }
         }
     }
 }
