@@ -58,11 +58,11 @@ namespace Farmer
             if (optionActive)
             {
                 KeyboardState newState = Keyboard.GetState();
-                if (optionSelector == 1 && oldState.IsKeyDown(Keys.Space) && newState.IsKeyUp(Keys.Space))
+                if (optionSelector == 1 && oldState.IsKeyDown(Keys.Space) && newState.IsKeyUp(Keys.Space) || optionSelector == 1 && oldState.IsKeyDown(Keys.Enter) && newState.IsKeyUp(Keys.Enter))
                 {
                     clicked = true;
                 }
-                if (optionSelector == 2 && oldState.IsKeyDown(Keys.Space) && newState.IsKeyUp(Keys.Space))
+                if (optionSelector == 2 && oldState.IsKeyDown(Keys.Space) && newState.IsKeyUp(Keys.Space) || optionSelector == 2 && oldState.IsKeyDown(Keys.Enter) && newState.IsKeyUp(Keys.Enter))
                 {
                     clicked2 = true;
                 }

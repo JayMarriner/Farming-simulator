@@ -30,6 +30,16 @@ namespace Game1
         }
         public GameStates activeState;
         public bool isPlaying;
+        private static Texture2D _blankTexture;
+        public static Texture2D BlankTexture(SpriteBatch s)
+        {
+            if (_blankTexture == null)
+            {
+                _blankTexture = new Texture2D(s.GraphicsDevice, 1, 1);
+                //_blankTexture.SetData(new[] { Color.Red });
+            }
+            return _blankTexture;
+        }
 
         public Game1()
         {
