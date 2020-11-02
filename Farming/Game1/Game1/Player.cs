@@ -48,10 +48,21 @@ namespace Farmer
             KeyboardState keyInput = Keyboard.GetState();
             if (keyInput.IsKeyDown(Keys.S))
             {
-                playerY+= 10;
-                playerX += 10;
-                Console.WriteLine(playerY);
+                playerY+= playerSpeed;
             }
+            if (keyInput.IsKeyDown(Keys.W))
+            {
+                playerY -= playerSpeed;
+            }
+            if (keyInput.IsKeyDown(Keys.A))
+            {
+                playerX -= playerSpeed;
+            }
+            if (keyInput.IsKeyDown(Keys.D))
+            {
+                playerX += playerSpeed;
+            }
+
         }
     }
 }

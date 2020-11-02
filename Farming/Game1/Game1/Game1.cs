@@ -85,7 +85,7 @@ namespace Game1
             }
             if (activeState == GameStates.Playing)
             {
-                player = new Player(350, 350, spriteBatch, gameContent, 1, 1, 0);
+                player = new Player(350, 350, spriteBatch, gameContent, 5, 1, 0);
             }
             if (activeState == GameStates.Paused)
             {
@@ -146,6 +146,7 @@ namespace Game1
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
+            GraphicsDevice.Clear(Color.Black);
             spriteBatch.Begin();
             // TODO: Add your drawing code here
             if (activeState == GameStates.Menu)
