@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SourceFile>D:/All files/University/Y2/Games/Farming-simulator/Farming/Game1/Game1/Content/player.png</SourceFile>
-  <SourceTime>2020-11-01T18:57:36.1699408+00:00</SourceTime>
+  <SourceTime>2020-11-03T21:43:51.1081161+00:00</SourceTime>
   <DestFile>D:/All files/University/Y2/Games/Farming-simulator/Farming/Game1/Game1/Content/bin/Windows/Content/player.xnb</DestFile>
-  <DestTime>2020-11-01T20:25:06.3292814+00:00</DestTime>
+  <DestTime>2020-11-04T12:57:37.3747778+00:00</DestTime>
   <Importer>TextureImporter</Importer>
-  <ImporterTime>2018-09-23T22:55:52+01:00</ImporterTime>
+  <ImporterTime>2018-12-08T16:35:54+00:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
-  <ProcessorTime>2018-09-23T22:55:52+01:00</ProcessorTime>
+  <ProcessorTime>2018-12-08T16:35:54+00:00</ProcessorTime>
   <Parameters>
     <Key>ColorKeyColor</Key>
     <Value>255,0,255,255</Value>

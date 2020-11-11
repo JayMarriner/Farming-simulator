@@ -41,6 +41,9 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Images.cs" />
+    <Compile Include="Fence.cs" />
+    <Compile Include="Shop.cs" />
     <Compile Include="menuOption.cs" />
     <Compile Include="mainMenu.cs" />
     <Compile Include="Player.cs" />

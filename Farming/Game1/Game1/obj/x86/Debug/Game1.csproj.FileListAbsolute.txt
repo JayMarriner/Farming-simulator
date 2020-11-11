@@ -49,3 +49,12 @@ D:\All files\University\Y2\Games\Farming-simulator\Farming\Game1\Game1\obj\x86\D
 D:\All files\University\Y2\Games\Farming-simulator\Farming\Game1\Game1\bin\Windows\x86\Debug\Content\mainMenu.xnb
 D:\All files\University\Y2\Games\Farming-simulator\Farming\Game1\Game1\bin\Windows\x86\Debug\Content\option.xnb
 D:\All files\University\Y2\Games\Farming-simulator\Farming\Game1\Game1\bin\Windows\x86\Debug\Content\option2.xnb
+D:\All files\University\Y2\Games\Farming-simulator\Farming\Game1\Game1\bin\Windows\x86\Debug\Content\fence.xnb
+D:\All files\University\Y2\Games\Farming-simulator\Farming\Game1\Game1\bin\Windows\x86\Debug\Content\level1.xnb
+D:\All files\University\Y2\Games\Farming-simulator\Farming\Game1\Game1\bin\Windows\x86\Debug\Content\shopBackground.xnb
+D:\All files\University\Y2\Games\Farming-simulator\Farming\Game1\Game1\bin\Windows\x86\Debug\Content\shop.xnb
+D:\All files\University\Y2\Games\Farming-simulator\Farming\Game1\Game1\bin\Windows\x86\Debug\Content\playerLeft.xnb
+D:\All files\University\Y2\Games\Farming-simulator\Farming\Game1\Game1\bin\Windows\x86\Debug\Content\playerRight.xnb
+D:\All files\University\Y2\Games\Farming-simulator\Farming\Game1\Game1\bin\Windows\x86\Debug\Content\playerUp.xnb
+D:\All files\University\Y2\Games\Farming-simulator\Farming\Game1\Game1\bin\Windows\x86\Debug\Content\interact.xnb
+D:\All files\University\Y2\Games\Farming-simulator\Farming\Game1\Game1\bin\Windows\x86\Debug\Content\shopMenu.xnb
