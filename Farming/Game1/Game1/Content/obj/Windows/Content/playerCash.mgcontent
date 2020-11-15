@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>D:/All files/University/Y2/Games/Farming-simulator/Farming/Game1/Game1/Content/playerCash.spritefont</SourceFile>
+  <SourceTime>2020-11-15T15:37:11.5985307+00:00</SourceTime>
+  <DestFile>D:/All files/University/Y2/Games/Farming-simulator/Farming/Game1/Game1/Content/bin/Windows/Content/playerCash.xnb</DestFile>
+  <DestTime>2020-11-15T15:37:17.7403044+00:00</DestTime>
+  <Importer>FontDescriptionImporter</Importer>
+  <ImporterTime>2018-09-23T22:55:52+01:00</ImporterTime>
+  <Processor>FontDescriptionProcessor</Processor>
+  <ProcessorTime>2018-09-23T22:55:52+01:00</ProcessorTime>
+  <Parameters>
+    <Key>PremultiplyAlpha</Key>
+    <Value>True</Value>
+  </Parameters>
+  <Parameters>
+    <Key>TextureFormat</Key>
+    <Value>Compressed</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

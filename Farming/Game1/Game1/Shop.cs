@@ -16,6 +16,7 @@ namespace Farmer
         private int shopY;
         KeyboardState oldState;
         private bool openShop;
+        private bool playerInteract;
 
         public Shop(int x, int y, GameContent gameContent)
         {
@@ -32,6 +33,14 @@ namespace Farmer
             }
         }
 
+        public bool shopPlayerInteract
+        {
+            get
+            {
+                return playerInteract;
+            }
+        }
+
         public void Draw(SpriteBatch s)
         {
             s.Draw(shopTexture, new Vector2(shopX, shopY), null, Color.White, 0, new Vector2(0, 0), 1.0f, SpriteEffects.None, 0);
@@ -44,18 +53,25 @@ namespace Farmer
 
         public void interactUpdate(Player player)
         {
-            if (player.interactZone)
+            if (this.interactionZone.Intersects(player.hitBox))
             {
+                playerInteract = true;
                 KeyboardState newState = Keyboard.GetState();
                 if (newState.IsKeyDown(Keys.E) && oldState.IsKeyUp(Keys.E) && openShop == true)
                 {
                     openShop = false;
+                    player.setPlayerMovement = false;
                 }
                 else if (newState.IsKeyDown(Keys.E) && oldState.IsKeyUp(Keys.E) && openShop == false)
                 {
                     openShop = true;
+                    player.setPlayerMovement = true;
                 }
                 oldState = newState;  
+            }
+            else
+            {
+                playerInteract = false;
             }
         }
 

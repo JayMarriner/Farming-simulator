@@ -11,6 +11,7 @@
     <File>D:/All files/University/Y2/Games/Farming-simulator/Farming/Game1/Game1/Content/option.png</File>
     <File>D:/All files/University/Y2/Games/Farming-simulator/Farming/Game1/Game1/Content/option2.png</File>
     <File>D:/All files/University/Y2/Games/Farming-simulator/Farming/Game1/Game1/Content/player.png</File>
+    <File>D:/All files/University/Y2/Games/Farming-simulator/Farming/Game1/Game1/Content/playerCash.spritefont</File>
     <File>D:/All files/University/Y2/Games/Farming-simulator/Farming/Game1/Game1/Content/playerLeft.png</File>
     <File>D:/All files/University/Y2/Games/Farming-simulator/Farming/Game1/Game1/Content/playerRight.png</File>
     <File>D:/All files/University/Y2/Games/Farming-simulator/Farming/Game1/Game1/Content/playerUp.png</File>
@@ -19,6 +20,7 @@
     <File>D:/All files/University/Y2/Games/Farming-simulator/Farming/Game1/Game1/Content/shopMenu.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

@@ -58,3 +58,4 @@ D:\All files\University\Y2\Games\Farming-simulator\Farming\Game1\Game1\bin\Windo
 D:\All files\University\Y2\Games\Farming-simulator\Farming\Game1\Game1\bin\Windows\x86\Debug\Content\playerUp.xnb
 D:\All files\University\Y2\Games\Farming-simulator\Farming\Game1\Game1\bin\Windows\x86\Debug\Content\interact.xnb
 D:\All files\University\Y2\Games\Farming-simulator\Farming\Game1\Game1\bin\Windows\x86\Debug\Content\shopMenu.xnb
+D:\All files\University\Y2\Games\Farming-simulator\Farming\Game1\Game1\bin\Windows\x86\Debug\Content\playerCash.xnb

@@ -62,23 +62,20 @@ namespace Farmer
             }
         }
 
-        public void interactUpdate(Player player)
-        {
-            if (player.interactZone)
-            {
-                interactShow = true;
-            }
-            else
-            {
-                interactShow = false;
-            }
-        }
-
         public void shopOpen(List<Shop> shops)
         {
             foreach (Shop shop in shops)
             {
-                if (shop.openShop)
+                Console.WriteLine("shop found.");
+                if (shop.shopPlayerInteract)
+                {
+                    interactShow = true;
+                }
+                else
+                {
+                    interactShow = false;
+                }
+                if (shop.shopState)
                 {
                     shopMenuShow = true;
                 }
@@ -87,6 +84,7 @@ namespace Farmer
                     shopMenuShow = false;
                 }
             }
+            Console.WriteLine("End");
         }
     }
 }

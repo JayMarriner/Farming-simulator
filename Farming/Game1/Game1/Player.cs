@@ -15,7 +15,6 @@ namespace Farmer
         private int playerY { get; set; }
         private int playerSpeed { get; set; }
         private int playerLevel { get; set; }
-        private int playerCash { get; set; }
         private int playerHeight { get; set; }
         private int playerWidth { get; set; }
         private SpriteBatch playerSpriteBatch;
@@ -28,6 +27,8 @@ namespace Farmer
         private int newPosY = 250;
         private bool objHit;
         public bool interactZone;
+        private bool stopMovement;
+        private int cashAmount;
 
         public Player(int x, int y, SpriteBatch spriteBatch, GameContent gameContent, int speed, int level, int cash)
         {
@@ -35,7 +36,7 @@ namespace Farmer
             playerY = y;
             playerSpeed = speed;
             playerLevel = level;
-            playerCash = cash;
+            cashAmount = cash;
             playerSpriteBatch = spriteBatch;
             playerTexture = gameContent.playerTexture;
             playerHeight = playerTexture.Height;
@@ -43,6 +44,22 @@ namespace Farmer
             playerUp = gameContent.playerUp;
             playerLeft = gameContent.playerLeft;
             playerRight = gameContent.playerRight;
+        }
+
+        public bool setPlayerMovement
+        {
+            set
+            {
+                stopMovement = value;
+            }
+        }
+
+        public int getCashAmount
+        {
+            get
+            {
+                return cashAmount;
+            }
         }
 
         public void Draw()
@@ -70,7 +87,11 @@ namespace Farmer
         public Rectangle newMove => new Rectangle(newPosX - playerWidth, newPosY - playerHeight, playerWidth, playerHeight);
 
         public void Update()
-        { 
+        {
+            if (stopMovement)
+            {
+                return;
+            }
             KeyboardState keyInput = Keyboard.GetState();
             if (keyInput.IsKeyDown(Keys.S))
             {
@@ -134,14 +155,14 @@ namespace Farmer
                     objHit = true;
                 }
 
-                if (this.hitBox.Intersects(shop.interactionZone))
-                {
-                    interactZone = true;
-                }
-                else
-                {
-                    interactZone = false;
-                }
+                //if (this.hitBox.Intersects(shop.interactionZone))
+                //{
+                //    interactZone = true;
+                //}
+                //else
+                //{
+                  //  interactZone = false;
+                //}
             }
         }
 

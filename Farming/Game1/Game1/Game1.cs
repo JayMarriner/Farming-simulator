@@ -17,6 +17,7 @@ namespace Game1
         GameContent gameContent;
         private int screenWidth;
         private int screenHeight;
+        SpriteFont cashText;
         //Objects
         public Player player;
         public mainMenu mainmenu;
@@ -24,6 +25,7 @@ namespace Game1
         public List<menuOption> options = new List<menuOption>();
         public List<Fence> fences = new List<Fence>();
         public List<Shop> shops = new List<Shop>();
+        int playerCash;
         //Game states to switch between menus and playing.
         public enum GameStates
         {
@@ -111,12 +113,16 @@ namespace Game1
                 fences.Add(new Fence(343, 300, false, gameContent));
                 fences.Add(new Fence(457, 413, true, gameContent));
                 fences.Add(new Fence(457, 620, true, gameContent));
-                player = new Player(200, 200, spriteBatch, gameContent, 3, 1, 0);
+                player = new Player(200, 200, spriteBatch, gameContent, 3, 1, 500);
                 images.Add(new Images(gameContent,0,0,1));
-                images.Add(new Images(gameContent,2,315,2));
+                //images.Add(new Images(gameContent,2,315,2));
                 images.Add(new Images(gameContent, 710, 925, 3));
                 images.Add(new Images(gameContent, 510, 190, 4));
                 shops.Add(new Shop(95, 315, gameContent));
+                shops.Add(new Shop(900, 400, gameContent));
+
+                //Text
+                cashText = Content.Load<SpriteFont>("playerCash");
             }
             if (activeState == GameStates.Paused)
             {
@@ -166,8 +172,9 @@ namespace Game1
                 player.fenceUpdate(fences);
                 player.shopUpdate(shops);
                 player.move(); //keep this at bottom of player updates to ensure collision.
+                playerCash = player.getCashAmount;
 
-                images.ForEach(x => x.interactUpdate(player));
+
                 images.ForEach(x => x.shopOpen(shops));
 
                 shops.ForEach(x => x.interactUpdate(player));
@@ -202,6 +209,7 @@ namespace Game1
                 fences.ForEach(x => x.Draw(spriteBatch));
                 shops.ForEach(x => x.Draw(spriteBatch));
                 images.ForEach(x => x.overlayDraw(spriteBatch));
+                spriteBatch.DrawString(cashText, "Cash: " + Convert.ToString(playerCash), new Vector2(1750, 15), Color.White);
             }
             if(activeState == GameStates.Paused)
             {
