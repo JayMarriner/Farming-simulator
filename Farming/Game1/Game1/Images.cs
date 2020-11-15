@@ -64,24 +64,20 @@ namespace Farmer
 
         public void shopOpen(List<Shop> shops)
         {
+            shopMenuShow = false;
+            interactShow = false;
             foreach (Shop shop in shops)
             {
                 Console.WriteLine("shop found.");
                 if (shop.shopPlayerInteract)
                 {
+                    //Interaction button displayed at bottom of screen.
                     interactShow = true;
-                }
-                else
-                {
-                    interactShow = false;
                 }
                 if (shop.shopState)
                 {
+                    //Shop background.
                     shopMenuShow = true;
-                }
-                else
-                {
-                    shopMenuShow = false;
                 }
             }
             Console.WriteLine("End");
